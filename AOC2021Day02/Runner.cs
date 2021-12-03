@@ -4,11 +4,11 @@ namespace AOC2021Day02;
 
 internal class Runner
 {
-    private readonly IInputDataReader _inputReader;
+    private readonly IStringListReader _inputReader;
     private readonly Part1Calculator _part1Calculator;
     private readonly Part2Calculator _part2Calculator;
 
-    public Runner(IInputDataReader inputReader, Part1Calculator part1Calculator, Part2Calculator part2Calculator)
+    public Runner(IStringListReader inputReader, Part1Calculator part1Calculator, Part2Calculator part2Calculator)
     {
         ArgumentNullException.ThrowIfNull(inputReader);
         ArgumentNullException.ThrowIfNull(part1Calculator);
@@ -21,7 +21,7 @@ internal class Runner
 
     internal async Task RunAsync()
     {
-        var inputs = await _inputReader.ReadAsStringAsync();
+        var inputs = await _inputReader.ReadAsStringListAsync();
 
         var output1 = _part1Calculator.Calculate(inputs);
 

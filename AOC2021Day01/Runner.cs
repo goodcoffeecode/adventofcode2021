@@ -4,11 +4,11 @@ namespace AOC2021Day01;
 
 internal class Runner
 {
-    private readonly IInputDataReader _reader;
+    private readonly IInt32ListReader _reader;
     private readonly SingleDayIncreaseCounter _singleDayIncreaseCounter;
     private readonly ThreeDayIncreaseCounter _threeDayIncreaseCounter;
 
-    public Runner(IInputDataReader reader, SingleDayIncreaseCounter singleDayIncreaseCounter, ThreeDayIncreaseCounter threeDayIncreaseCounter)
+    public Runner(IInt32ListReader reader, SingleDayIncreaseCounter singleDayIncreaseCounter, ThreeDayIncreaseCounter threeDayIncreaseCounter)
     {
         ArgumentNullException.ThrowIfNull(reader);
         ArgumentNullException.ThrowIfNull(singleDayIncreaseCounter);

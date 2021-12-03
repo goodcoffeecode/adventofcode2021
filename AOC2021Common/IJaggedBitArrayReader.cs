@@ -31,9 +31,9 @@ public class JaggedBitArrayReader : IJaggedBitArrayReader
             for (int j = 0; j < stringArray[i].Length; j++)
             {
                 row[j] = stringArray[i][j] == '1';
-
-                values[i] = row;
             }
+
+            values[i] = row;
         }
 
         return values;

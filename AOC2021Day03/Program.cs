@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using AOC2021Common;
 
-namespace AOC2021Day02;
+namespace AOC2021Day03;
 
 public static class Program
 {
@@ -11,6 +11,7 @@ public static class Program
 
         services
             .AddSingleton(s => new TextFileInputOptions("..\\..\\..\\inputData.txt"))
+            .AddSingleton<IJaggedBitArrayReader, JaggedBitArrayReader>()
             .AddSingleton<IStringListReader, TextFileStringListReader>()
             .AddSingleton<Part1Calculator>()
             .AddSingleton<Part2Calculator>()

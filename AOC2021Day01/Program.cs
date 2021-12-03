@@ -11,7 +11,7 @@ public static class Program
 
         services
             .AddSingleton(s => new TextFileInputOptions("..\\..\\..\\inputData.txt"))
-            .AddSingleton<IInputDataReader, TextFileInputReader>()
+            .AddSingleton<IInt32ListReader, TextFileInt32ListReader>()
             .AddSingleton<SingleDayIncreaseCounter>()
             .AddSingleton<ThreeDayIncreaseCounter>()
             .AddScoped<Runner>();

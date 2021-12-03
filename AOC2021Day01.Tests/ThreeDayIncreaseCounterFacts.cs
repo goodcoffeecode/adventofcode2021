@@ -4,7 +4,7 @@ namespace AOC2021Day01.Tests;
 
 public class ThreeDayIncreaseCounterFacts
 {
-    private readonly ThreeDayIncreaseCounter _sut = new ThreeDayIncreaseCounter(new SingleDayIncreaseCounter());
+    private readonly ThreeDayIncreaseCounter _sut = new(new SingleDayIncreaseCounter());
 
     [Fact]
     public void ExampleDataShouldReturnTheCorrectResult()

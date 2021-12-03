@@ -3,6 +3,7 @@
 public interface IInputDataReader
 {
     Task<IList<int>> ReadAsInt32ListAsync();
+    Task<IList<string>> ReadAsStringAsync();
 }
 
 public record class TextFileInputOptions(string FileName);
@@ -33,5 +34,22 @@ public class TextFileInputReader : IInputDataReader
         }
 
         return data;
+    }
+
+    public async Task<IList<string>> ReadAsStringAsync()
+    {
+        var values = new List<string>();
+
+        using (var sr = File.OpenText(_fileName))
+        {
+            while (!sr.EndOfStream)
+            {
+                values.Add(await sr.ReadLineAsync());
+            }
+
+            sr.Close();
+        }
+
+        return values;
     }
 }

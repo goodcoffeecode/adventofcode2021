@@ -20,15 +20,14 @@ public class TextFileStringListReader : IStringListReader
     {
         var values = new List<string>();
 
-        using (var sr = File.OpenText(_fileName))
-        {
-            while (!sr.EndOfStream)
-            {
-                values.Add(await sr.ReadLineAsync());
-            }
+        using var sr = File.OpenText(_fileName);
 
-            sr.Close();
+        while (!sr.EndOfStream)
+        {
+            values.Add(await sr.ReadLineAsync());
         }
+
+        sr.Close();
 
         return values;
     }

@@ -1,13 +1,11 @@
-﻿using AOC2021Common;
+﻿namespace AOC2021Common;
 
-namespace AOC2021Day04;
-
-internal interface IStringYieldingReader
+public interface IStringYieldingReader
 {
     IAsyncEnumerable<string?> YieldStringsAsync();
 }
 
-internal class TextFileStringYieldingReader : IStringYieldingReader
+public class TextFileStringYieldingReader : IStringYieldingReader
 {
     private readonly string _fileName;
 

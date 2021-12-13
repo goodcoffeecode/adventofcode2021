@@ -1,3 +1,4 @@
+using AOC2021Common;
 using System.Linq;
 using Xunit;
 

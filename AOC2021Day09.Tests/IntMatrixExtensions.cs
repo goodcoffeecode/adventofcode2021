@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using static AOC2021Common.MatrixUtils;
 
 namespace AOC2021Day09.Tests;
 
@@ -8,9 +9,9 @@ public static class IntMatrixExtensions
     {
         var localMinima = new List<Point>();
 
-        for (int col = 0; col < matrix.ColCount(); col++)
+        for (int col = 0; col < matrix.GetColCount(); col++)
         {
-            for (int row = 0; row < matrix.RowCount(); row++)
+            for (int row = 0; row < matrix.GetRowCount(); row++)
             {
                 // Are any of my neighbours bigger than me?
                 var me = matrix[row, col];
@@ -26,7 +27,7 @@ public static class IntMatrixExtensions
                     }
                 }
                 // Down
-                if (row < matrix.RowCount() - 1)
+                if (row < matrix.GetRowCount() - 1)
                 {
                     if (matrix[row + 1, col] <= me)
                     {
@@ -42,7 +43,7 @@ public static class IntMatrixExtensions
                     }
                 }
                 // Right
-                if (col < matrix.ColCount() - 1)
+                if (col < matrix.GetColCount() - 1)
                 {
                     if (matrix[row, col + 1] <= me)
                     {

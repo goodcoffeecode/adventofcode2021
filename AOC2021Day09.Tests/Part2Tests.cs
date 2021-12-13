@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using AOC2021Common;
+using Xunit;
 
 namespace AOC2021Day09.Tests
 {

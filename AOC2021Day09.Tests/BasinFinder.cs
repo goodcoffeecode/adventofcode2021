@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using static AOC2021Common.MatrixUtils;
 
 namespace AOC2021Day09.Tests
 {

@@ -33,7 +33,7 @@ public class Part2Tests
     {
         var data = getData();
 
-        int[,] matrix = MatrixUtils.ConvertToMatrix(data);
+        var matrix = MatrixUtils.ConvertToMatrix(data);
 
         var totalCells = matrix.GetRowCount() * matrix.GetColCount();
 

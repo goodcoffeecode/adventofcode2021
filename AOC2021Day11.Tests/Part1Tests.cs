@@ -5,7 +5,6 @@ namespace AOC2021Day11.Tests;
 
 public partial class Part1Tests
 {
-
     [Fact]
     public void SimpleDataShouldGiveCorrectResult()
     {
@@ -14,7 +13,7 @@ public partial class Part1Tests
 
         var data = InputData.GetSimpleData();
 
-        int[,] matrix = MatrixUtils.ConvertToMatrix(data);
+        var matrix = MatrixUtils.ConvertToMatrix(data);
 
         var actual = 0;
 
@@ -28,7 +27,6 @@ public partial class Part1Tests
         Assert.Equal(Expected, actual);
     }
 
-
     [Fact]
     public void SampleDataShouldGiveCorrectResult()
     {
@@ -37,7 +35,7 @@ public partial class Part1Tests
 
         var data = InputData.GetSampleData();
 
-        int[,] matrix = MatrixUtils.ConvertToMatrix(data);
+        var matrix = MatrixUtils.ConvertToMatrix(data);
 
         var actual = 0;
 
@@ -59,7 +57,7 @@ public partial class Part1Tests
 
         var data = InputData.GetRealData();
 
-        int[,] matrix = MatrixUtils.ConvertToMatrix(data);
+        var matrix = MatrixUtils.ConvertToMatrix(data);
 
         var actual = 0;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AOC2021Common;
+using System;
 using System.Linq;
 using System.Text;
 

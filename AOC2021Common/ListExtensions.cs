@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace AOC2021Day08.Tests;
+﻿namespace AOC2021Common;
 
 public static class ListExtensions
 {
